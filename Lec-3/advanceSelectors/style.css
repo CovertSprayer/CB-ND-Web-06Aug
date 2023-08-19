@@ -54,3 +54,27 @@ nav a:active{
 a[href="http://www.instagram.com"]:visited{
     color:red
 } */
+
+/* ol li:first-child{
+    background-color: yellow;
+}
+
+ol li:last-child{
+    background-color: orangered;
+} */
+
+ol li:nth-child(2n){
+    background-color: aqua;
+}
+
+ol li:nth-child(2n+1){
+    background-color: rgba(11, 229, 229, 0.38);
+}
+
+div div p::first-letter{
+    font-size: 35px;
+}
+
+#phone-directory li::after{
+    content: '☎️';
+}
