@@ -1,0 +1,56 @@
+
+/* ----------------Descendent combinator */
+div div p span{
+    color: aqua;
+}
+
+/*----------------- child selector */
+/* ul > li{
+    color: red;
+} */
+
+/* -------------- immediate siblings */
+/* li+li{
+    color:red;
+} */
+
+/* -------------general siblings */
+/* li~li{
+    color:red;
+} */
+
+/* pseudo selectors */
+/* ---------------------navbar */
+
+nav{
+    background-color: black;
+    font-size: 20px;
+    padding: 15px;
+}
+
+nav a:link{
+    color: white;
+    text-decoration: none;
+}
+
+nav a:visited{
+    color: white;
+}
+
+nav a:hover{
+    border-bottom: 3px solid white;
+}
+
+nav a:active{
+    color: orange;
+    border: none;
+}
+
+
+/* a[href="http://www.instagram.com"]:link{
+    color:orange;
+}
+
+a[href="http://www.instagram.com"]:visited{
+    color:red
+} */

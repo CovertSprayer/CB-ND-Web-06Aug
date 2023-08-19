@@ -1,0 +1,28 @@
+/* element selector */
+h1{
+    border: 2px solid red;
+}
+
+/* class selector */
+.special{
+    border: 2px solid black;
+}
+
+/* id selector */
+#unique{
+    font-size: 25px;
+}
+
+/* attribute selector */
+input[type="text"]{
+    font-size:30px;
+}
+
+a[href="https://www.google.com"]{
+    display: block;
+}
+
+/* universal selector */
+*{
+    border: 2px solid green;
+}
