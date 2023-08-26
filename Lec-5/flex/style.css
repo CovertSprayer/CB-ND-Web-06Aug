@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    font-size: 25px;
+}
+.container{
+    width: 80vw;
+    /* width: 1200px; */
+    height: 90vh;
+    /* height: 600px; */
+    border: 2px solid black;
+    background-color: orange;
+    display: flex;
+    /* align-items: start; */
+    /* justify-content: center; */
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    /* gap: 20px; */
+    /* column-gap: 100px; */
+}
+
+.child{
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    background-color: yellow;
+    font-size: 30px;
+}
+
+.child-1{
+    flex-grow: 1;
+}
+.child-2{
+    flex-grow: 3;
+}
+.child-3{
+    flex-grow: 1;
+}
