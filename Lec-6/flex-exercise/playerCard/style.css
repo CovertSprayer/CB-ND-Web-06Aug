@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card{
+    border: 20px solid rgba(74, 71, 71, 0.709);
+    width: 300px;
+    padding: 10px;
+}
+
+.section-A img{
+    width: 100%;
+}
+
+.section-A{
+    border-radius: 25px;
+}
+

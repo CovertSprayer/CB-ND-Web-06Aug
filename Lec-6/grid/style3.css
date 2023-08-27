@@ -1,0 +1,16 @@
+.parent{
+    border: 2px solid red;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* grid-template-columns: 1fr 2fr 1fr; */
+}
+
+.el{
+    border: 2px solid black;
+    background-color: yellow;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
