@@ -1,0 +1,43 @@
+
+.container{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    background-color: aquamarine;
+
+    animation-name: changeShape;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    /* animation-direction: alternate; */
+    animation-timing-function: ease;
+
+    /* animation: moveForward infinite alternate 2s 2s ; */
+}
+
+
+@keyframes changeShape{
+    from{
+        width: 200px;
+        /* border-radius: 0; */
+    }
+    to{
+        width: 800px;
+        /* border-radius: 50%;
+        background-color: coral; */
+    }
+}
+
+@keyframes moveForward{
+    0%{
+        /* width: 200px; */
+        /* border-radius: 0; */
+    }
+    50%{
+        background-color: yellow;
+    }
+    100%{
+        /* width: 800px; */
+        /* border-radius: 50%; */
+        background-color: coral;
+    }
+}

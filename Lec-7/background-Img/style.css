@@ -1,0 +1,14 @@
+
+.container{
+    border-radius: 50%;
+    border: 2px solid black;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    background-image: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: 25px 50px; */
+    background-position: center;
+    /* background-position-x: 25px; */
+}
