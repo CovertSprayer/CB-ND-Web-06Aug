@@ -1,0 +1,35 @@
+body{
+    perspective: 800px;
+}
+
+.card{
+    border: 2px solid black;
+    height: 400px;
+    width: 280px;
+    margin: 100px auto;
+    transition-duration: 2s;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.side-a, .side-b{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.side-a{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/b4/Lionel-Messi-Argentina-2022-FIFA-World-Cup_%28cropped%29.jpg);
+}
+
+.side-b{
+    background-color: pink;
+    font-size: 20px;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.card:hover{
+    transform: rotateY(180deg);
+}
+
