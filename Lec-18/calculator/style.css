@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic sans MS';
+}
+
+.container{
+    border: 2px solid black;
+    width: 360px;
+    margin: 40px auto;
+    padding: 1.2rem;
+    border-radius: 10px;
+}
+
+h1{
+    text-align: center;
+}
+
+td{
+    border: 1px solid black;
+    width: 80px;
+    height: 50px;
+    transition: 200ms;
+}
+button{
+    width: 100%;
+    height: 100%;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+input, table{
+    display: block;
+    margin: 10px auto;
+}
+
+input{
+    font-size: 1.4rem;
+    padding: 2px;
+}
+
+td:active{
+    transform: scale(0.8);
+}
+
