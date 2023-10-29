@@ -1,0 +1,28 @@
+
+
+h1{
+    text-align: center;
+    font-size: 3rem;
+}
+
+form{
+    display: flex;
+    justify-content: center; 
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+input, button{
+    font-size: 2rem;
+    padding: 8px;
+}
+
+.list{
+    width: 80vw;
+    margin: 0 auto;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
