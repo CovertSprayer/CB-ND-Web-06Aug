@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 65vw;
+    margin: 20px auto;
+    border: 2px solid black;
+}
+
+h2{
+    text-align: center;
+    margin: 20px 0;
+}
+
+form{
+    padding: 0 20px;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    /* overflow: scroll; */
+}
+
+.inp{
+    flex-grow: 2;
+    padding: 5px;
+}
+
+.btn{
+    flex-grow: 1;
+}
+
+.todo-list{
+    margin: 10px 0;
+}
+
+.todo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 20px;
+}
+
+.section-A{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.section-B{
+    display: flex;
+}
+
+.section-B li{
+    list-style: none;
+    cursor: pointer;
+}
+
+.line{
+    text-decoration: line-through;
+}
