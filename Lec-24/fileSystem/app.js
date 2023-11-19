@@ -14,7 +14,7 @@ let loc = path.join(__dirname, 'data', 'file.csv');
 //     console.log('Data written successfully!');
 // });
 
-fs.readFile(loc, {encoding:'utf-8'},(data, err)=>{
+fs.readFile(loc, {encoding:'utf-8'},(err, data)=>{
     if(err){
         console.log(err);
         return;
