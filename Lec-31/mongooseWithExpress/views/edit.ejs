@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/blogs/<%= blog._id %>?_method=PATCH" method="POST">
+        <textarea name="text" cols="20" rows="5" placeholder="write here..."><%= blog.text %></textarea>
+        <br>
+        <input name="username" type="text" placeholder="Username" value="<%= blog.username %>">
+        <br>
+        <input name="email" type="email" placeholder="Email" value="<%= blog.email %>">
+        <br> <br>
+        <button>Save</button>
+    </form>
+</body>
+</html>

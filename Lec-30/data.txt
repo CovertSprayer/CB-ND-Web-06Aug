@@ -1,0 +1,23 @@
+[
+    {
+        user_id: 12343,
+        name: "Parth"
+        address: "Delhi, Ind"
+        orders: []
+    },
+    {
+        user_id: 1,
+        name: "Sachin"
+        address: "Delhi, Ind"
+    },
+    {
+        user_id: 12,
+        name: "Rahul"
+        address: "Delhi, Ind"
+    },
+    {
+        user_id: 343,
+        name: "Akhilesh"
+        address: "Delhi, Ind"
+    }
+]
