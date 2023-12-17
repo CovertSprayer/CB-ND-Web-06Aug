@@ -1,0 +1,23 @@
+<% layout('layouts/boilerplate.ejs') -%>
+
+<div class="row">
+    <div class="col-lg-6 col-12">
+        <div class="card mx-auto" style="width: 18rem;">
+            <img src="<%= product.image %>" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><%= product.name %></h5>
+              <h5 class="card-text">$ <%= product.price %></h5>
+              <p class="card-text">$ <%= product.desc %></p>
+              <a href="#" class="btn btn-primary btn-sm">Buy Now</a>
+              <form class="d-inline" action="/products/<%= product._id %>?_method=DELETE" method="post">
+                <button class="btn btn-danger btn-sm">Delete</button>
+              </form>
+              <a href="/products/<%= product._id %>/edit" class="btn btn-secondary btn-sm">Edit</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6 col-12 mx-auto">
+        <h1 class="display-5 text-center">All Reviews</h1>
+    </div>
+</div>
