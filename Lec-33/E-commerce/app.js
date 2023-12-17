@@ -3,7 +3,6 @@ const app = express();
 const path = require('path');
 const mongoose = require('mongoose');
 const ejsMate = require('ejs-mate');
-const Product = require('./models/product');
 const methodOverride = require('method-override');
 
 mongoose.connect('mongodb://127.0.0.1:27017/E-com-6Aug')
@@ -22,41 +21,12 @@ app.get('/', (req, res) => {
     res.send('Working Fine!!');
 })
 
-// ------------------- product routes
-app.get('/products', async (req, res) => {
-    const products = await Product.find({});
-    res.render('products/index', { products });
-})
+const productRoutes = require('./routes/product');
+const reviewRoutes = require('./routes/review');
 
-app.get('/product/new', (req, res) => {
-    res.render('products/new');
-})
+app.use(productRoutes);
+app.use(reviewRoutes);
 
-app.post('/products', async (req, res) => {
-    const { name, price, image, desc } = req.body;
-    await Product.create({ name, price, image, desc });
-
-    res.redirect('/products');
-})
-
-app.get('/products/:id', async (req, res) => {
-    const { id } = req.params;
-    const product = await Product.findById(id);
-    res.render('products/show', { product });
-})
-
-app.get('/products/:id/edit', async (req, res) => {
-    const { id } = req.params;
-    const product = await Product.findById(id);
-    res.render('products/edit', { product });
-})
-
-app.delete('/products/:id', async (req, res) => {
-    const { id } = req.params;
-    await Product.findByIdAndDelete(id);
-
-    res.redirect('/products');
-})
 
 const PORT = 8000;
 app.listen(PORT, () => {

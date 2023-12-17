@@ -1,7 +1,7 @@
 <% layout('layouts/boilerplate.ejs') -%>
 
 <section>
-    <form action="/products" method="post">
+    <form action="/products/<%= product._id %>?_method=PATCH" method="post">
         <div class="mb-3">
             <label for="productName" class="form-label">Product Name</label>
             <input name="name" type="text" class="form-control" id="productName" placeholder="Enter Product Name" value="<%= product.name %>">
