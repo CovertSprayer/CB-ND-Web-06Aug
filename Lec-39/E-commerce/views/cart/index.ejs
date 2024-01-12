@@ -1,0 +1,46 @@
+<% layout('layouts/boilerplate.ejs') -%>
+<%- include('../partials/flash') %>
+
+<div class="row">
+    <div class="col-lg-8">
+        <% for( let cartItem of user.cart ) { %>
+            <div class="card mb-3 mx-auto" style="max-width: 590px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="<%= cartItem.productId.image %>" class="img-fluid rounded-start h-100" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title"><%= cartItem.productId.name %></h5>
+                      <p class="card-text">$ <%= cartItem.productId.price %></p>
+                      <p class="card-text"><%= cartItem.productId.desc %></p>
+                      <div>
+                        <form class="d-inline" action="/user/cart/<%= cartItem.productId._id %>/remove" method="post">
+                            <button class="btn btn-sm btn-primary"> - </button>
+                        </form>
+                        <span><%= cartItem.quantity %></span>
+                        <form class="d-inline" action="/user/cart/<%= cartItem.productId._id %>/add" method="post">
+                            <button class="btn btn-sm btn-primary"> + </button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        <% } %>
+    </div>
+
+    <div class="col-lg-4">
+        <h2>Total Price</h2>
+        <div class="card" style="width: 18rem;">
+            <ul class="list-group list-group-flush">
+                <% for( let cartItem of user.cart ) { %>
+                    <li class="list-group-item">
+                        <%= cartItem.productId.name %> - $ <%= cartItem.productId.price %> * <%= cartItem.quantity %>
+                    </li>
+                <% } %>
+                <li class="list-group-item"><b>Total - $ <%= totalPrice %></b></li>
+            </ul>
+        </div>
+    </div>
+</div>

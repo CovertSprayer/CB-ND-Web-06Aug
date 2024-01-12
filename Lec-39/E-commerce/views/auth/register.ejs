@@ -1,0 +1,31 @@
+<% layout('layouts/boilerplate.ejs') -%>
+<%- include('../partials/flash') %>
+
+<form action="/register" method="post">
+    <div class="mb-3">
+        <label for="usernameInput" class="form-label">Username</label>
+        <input name="username" type="text" class="form-control" id="usernameInput" aria-describedby="emailHelp">
+      </div>
+    <div class="mb-3">
+      <label for="emailInput" class="form-label">Email address</label>
+      <input name="email" type="email" class="form-control" id="emailInput" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Role:</label>
+        <div class="form-check">
+            <input value="buyer" class="form-check-input" type="radio" name="role" id="buyerInput" checked>
+            <label class="form-check-label" for="buyerInput">Buyer</label>
+          </div>
+          <div class="form-check">
+            <input value="seller" class="form-check-input" type="radio" name="role" id="sellerInput">
+            <label class="form-check-label" for="sellerInput">Seller</label>
+          </div>
+    </div>
+    <div class="mb-3">
+      <label for="passwordInput" class="form-label">Password</label>
+      <input name="password" type="password" class="form-control" id="passwordInput">
+    </div>
+    <button type="submit" class="btn btn-primary btn-sm">Register</button>
+</form>
+
+<p class="mt-3">Already registered? <a href="/login">login</a> </p>
