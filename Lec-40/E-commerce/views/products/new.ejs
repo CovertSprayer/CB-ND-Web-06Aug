@@ -1,0 +1,27 @@
+<% layout('layouts/boilerplate.ejs') -%>
+
+<section>
+    <form action="/products" method="post" class="needs-validation" novalidate>
+        <div class="mb-3">
+            <label for="productName" class="form-label">Product Name</label>
+            <input required name="name" type="text" class="form-control" id="productName" placeholder="Enter Product Name">
+        </div>
+        <div class="mb-3">
+            <label for="priceInput" class="form-label">Price</label>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">$</span>
+                <input required name="price" type="Number" id="priceInput" class="form-control" placeholder="Enter Price" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="imgInput" class="form-label">Image</label>
+            <input required name="image" type="text" class="form-control" id="imgInput" placeholder="Enter Image URL">
+        </div>
+        <div class="mb-3">
+            <label for="descInp" class="form-label">Description</label>
+            <textarea required name="desc" class="form-control" id="descInp" rows="3" placeholder="Enter Description"></textarea>
+        </div>
+
+        <button class="btn btn-primary btn-sm">Submit</button>
+    </form>
+</section>
