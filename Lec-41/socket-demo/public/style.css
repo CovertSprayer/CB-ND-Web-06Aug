@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    text-align: center;
+    padding: 15px 0;
+}
+
+.chat-container{
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 450px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.chat{
+    border-bottom: 3px solid black;
+    height: 450px;
+    overflow-y: auto;
+}
+
+.msg{
+    border: 2px solid green;
+    font-size: 1.3rem;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 25px;
+}
+
+.send-btn{
+    font-size: 1.3rem;
+}
+
+.receiver{
+    background-color: #9ff3e9;
+}
+
+.sender{
+    background-color: #A1CDF1;
+}

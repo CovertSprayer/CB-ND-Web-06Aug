@@ -1,0 +1,28 @@
+<% layout('layouts/boilerplate.ejs') -%>
+<%- include('../partials/flash') %>
+
+<section>
+    <form action="/products/<%= product._id %>?_method=PATCH" method="post">
+        <div class="mb-3">
+            <label for="productName" class="form-label">Product Name</label>
+            <input name="name" type="text" class="form-control" id="productName" placeholder="Enter Product Name" value="<%= product.name %>">
+        </div>
+        <div class="mb-3">
+            <label for="priceInput" class="form-label">Price</label>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">$</span>
+                <input name="price" type="Number" id="priceInput" class="form-control" placeholder="Enter Price" aria-label="Username" aria-describedby="basic-addon1" value="<%= product.price %>">
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="imgInput" class="form-label">Image</label>
+            <input name="image" type="text" class="form-control" id="imgInput" placeholder="Enter Image URL" value="<%= product.image %>">
+        </div>
+        <div class="mb-3">
+            <label for="descInp" class="form-label">Description</label>
+            <textarea name="desc" class="form-control" id="descInp" rows="3" placeholder="Enter Description"><%= product.desc %></textarea>
+        </div>
+
+        <button class="btn btn-primary btn-sm">Save</button>
+    </form>
+</section>
