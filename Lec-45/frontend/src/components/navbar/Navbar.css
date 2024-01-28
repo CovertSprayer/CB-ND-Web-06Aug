@@ -1,0 +1,25 @@
+nav{
+    border: 2px solid black;
+    height: 4rem;
+    background-color: #a2e3c4;
+    padding: 0 30px;
+}
+
+ul.nav-links{
+    display: flex;
+    height: 100%;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+}
+
+ul li{
+    list-style-type: none;
+    font-size: 20px;
+    border: 2px solid #a2e3c4;
+}
+
+ul li:hover{
+    cursor: pointer;
+    border-bottom: 2px solid black;
+}
