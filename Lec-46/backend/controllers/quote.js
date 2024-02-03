@@ -74,9 +74,9 @@ module.exports.updateQuote = async (req, res)=>{
 
         const existingQuote = await Quote.findById(id);
 
-        existingQuote.author = author;
-        existingQuote.text = text;
-        existingQuote.photo = photo;
+        if(author) existingQuote.author = author;
+        if(text) existingQuote.text = text;
+        if(photo) existingQuote.photo = photo;
 
         await existingQuote.save();
 
